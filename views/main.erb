@@ -1,0 +1,169 @@
+<html lang="en"><head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Главная</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/results">Результаты</a>
+        </li>
+      </ul>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <% unless @user.nil?%>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#diagnostic">О диагностике</a>
+            </li>
+          <% end %>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">О проекте</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">Услуги</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Контакты</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-primary text-white">
+    <div class="container text-center">
+      <h1>Добро пожаловать на страницу диагностики профессиональной компетентности педагога</h1>
+      <% if @user.nil? %>
+        <p class="lead">Здравствуйте, Гость!</p>
+        <a href="/registration" class="btn btn-outline-light btn-lg" role="button" aria-disabled="true">Пожалуйста, зарегистрируйтесь</a>
+      <% else %>
+        <p class="lead">Благодарим за регистрацию, <%= @user.name.name_secname %>!</p>
+        <a href="/testing" class="btn btn-outline-light btn-lg" role="button" aria-disabled="true">Нажмите, если готовы начать</a>
+      <% end %>
+    </div>
+  </header>
+
+  <% unless @user.nil?%>
+    <section id="diagnostic" class="bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>О диагностике</h2>
+            <ul>
+              <li>
+                <h3>Особенности методики</h3>
+                <p class="lead">Данная диагностическая методика представляет собой самооценивание педагогом своей профессиональной компетентности. Ключевая идея основывается на позициях экзистенциализма, а именно: человек определяется исключительно его собственными свободными решениями. То есть Ваши поступки определяют Вашу природу, каждый Ваш выбор свободен, а Вы несёте за него полную ответственность. Данная методика не является проверкой знаний и умений, не используется в целях контроля, она предназначена для понимания педагогом своих профессиональных потребностей и осознания профессиональных дефицитов</p>
+              </li>
+              <li>
+                <h3>Как пройти диагностику</h3>
+                <p class="lead">Вам будут последовательно предлагаться 45 утверждений. Если Вы согласны с утверждением, то нажимаете «согласен», если Вы сомневаетесь или не понимаете, о чем идет речь, нажимаете «не согласен». По результатам самооценивания Вам будут предложены рекомендации по содержанию Вашего дополнительного профессионального образования и рекомендации по конструированию индивидуального образовательного маршрута</p>
+              </li>
+              <li>
+                <h3>Что делать после завершения диагностики</h3>
+                <p class="lead">Вы сможете сохранить рекомендации и выбрать на сайте Института развития образования, подходящие для Вас образовательные мероприятия, так же Вы можете воспользоваться ресурсами страницы Тьюторского центра <a href="http://yatutor.iro.yar.ru/index.php/ru/samoobrazovanie">«Самообразование»</a>. 
+                Мы Вам предлагаем вариант тьюторской поддержки. Со своими результатами Вы можете обратиться к тьютору, который поможет Вам составить индивидуальный план профессионального развития, выбрать необходимые образовательные мероприятия. <a href="http://yatutor.iro.yar.ru/index.php/ru/nashi-tyutory">Записаться к тьютору</a></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  <% end %>
+
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>О проекте</h2>
+          <p class="lead">Тьюторский центр обеспечивает сопровождение формального, неформального и
+          информального дополнительного профессионального образования учителей. Отправной
+          точкой сопровождения является осознание педагогом своих профессиональных
+          потребностей. Данный ресурс позволяет педагогу сделать шаг в профессиональном
+          развитии.</p>          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Услуги</h2>
+          <p class="lead">Тьюторский центр оказывает следующие услуги: </p>
+          <ul>
+            <li>Конструирование индивидуальных образовательных маршрутов педагогов общего образования на основе данных диагностики профессиональной компетентности</li>
+            <li>Навигация по образовательному пространству дополнительного профессионального педагогического образования региона</li>
+            <li>Поддержка профессиональных обучающихся сообществ учителей</li>
+            <li>Сопровождение горизонтального обучения учителей</li>
+            <li>Создание информационных, методических и образовательных ресурсов для самообразования учителей</li>
+            <li>Подготовка и сопровождение муниципальных тьюторских команд профессионального развития педагога</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Контакты</h2>
+          <dl>
+            <dt><p class="lead"><a href="http://www.iro.yar.ru/index.php?id=7">ГАУ ДПО ЯО Институт развития образования</a></p></dt>
+            <dt><p class="lead">Руководитель проекта: Тихомирова Ольга Вячеславовна</p><dt>
+            <dt><p class="lead">Позвонить: 8 (4852) 23-09-35</p></dt>
+            <dt><p class="lead">Написать: ovtikhomirova@yandex.ru</p></dt>
+            <dt><p class="lead"><a href="http://yatutor.iro.yar.ru/index.php/ru/nashi-tyutory">Записаться на консультацию тьютора</a></p></dt>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Все права защищены © Тьюторский центр 2020</p>
+    </div>
+    <div class="container" align="center">
+      <a class="m-0 text-center text-white" href="https://startbootstrap.com/">Template from startbootstrap</a>
+    </div>
+    <div class="container" align="center">
+        <a class="m-0 text-center text-white">Developed by E. Tikhomirov</a>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+
+
+
+
+</body></html>

@@ -1,0 +1,68 @@
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-3 d-none d-md-block shadow-lg sidebar">
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column">
+            <a class="alert alert-info" role="alert">
+              <h4 class="mb-3 text-left">
+                Email: <%= @user.email%>
+              </h4>
+              <h4 class="mb-3 text-left">   
+                Имя пользователя: <%= @user.name%>
+              </h4>
+            </a>
+
+            <a class="alert alert-dark" role="alert">
+              <h4 class="mb-3 text-left">
+                Педагогический стаж: <%= @user.job_information.teaching_exp%>
+              </h4>
+              <h4 class="mb-3 text-left">
+                Должность: <%= @user.job_information.position%>
+              </h4>
+              <h4 class="mb-3 text-left">
+                Категория: <%= @user.job_information.category%>
+              </h4>
+            </a>
+            <a class="alert alert-warning" role="alert">
+              <h4 class="mb-3 text-left">
+                  Уровень компетентности: <%= @res.competence_lvl%>
+              </h4>
+            </a>
+
+            <a href="/more_info" class="btn btn-outline-info btn-lg" role="button" aria-pressed="true">Узнать подробнее об уровне компетентности и точках роста</a>  
+
+          </ul>
+        </div>
+      </nav>
+      <main class="col-md-9 ml-sm-auto" role="main">
+      <header class="alert-primary text-dark">
+        <div class="container text-center">
+          <h1>Результаты диагностики</h1>
+            <p class="lead">С полученными рекомендациями Вы можете обратиться к тьютору, который поможет Вам составить индивидуальный план профессионального развития, выбрать необходимые образовательные мероприятия. <a href=http://yatutor.iro.yar.ru/index.php/ru/nashi-tyutory>Записаться к тьютору</a></p>            
+        </div>
+      </header>
+        <div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;" >
+          <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+            <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0">
+            </div>
+          </div>
+          <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+            <div style="position:absolute;width:200%;height:200%;left:0; top:0">
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="form-col">
+            <div class="form-group row-md">
+              <a class="btn btn-info btn-lg btn-block" href="/results/show_dpo" role="button">Показать рекомендуемое ДПО</a>
+              <% if @user.job_information.position == "Учитель НОО" %>
+                <a class="btn btn-info btn-lg btn-block" href="/results/show_um" role="button">Показать рукомендуемый ИОМ</a>
+              <% end %>
+            </div>
+          </div> 
+        </div>
+      </main>
+    </div>
+  </div>
+</body>

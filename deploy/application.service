@@ -1,0 +1,11 @@
+[Unit]
+Description = My web ruby application running with rackup
+
+[Service]
+Environment = PATH=/opt/rubies/ruby-2.6.6/bin:/usr/local/bin:/usr/bin:/bin
+WorkingDirectory = /srv/Proftest
+Type = simple
+ExecStart = /opt/rubies/ruby-2.6.6/bin/bundle exec rackup -o 0.0.0.0 config.ru
+
+[Install]
+WantedBy = multi-user.target

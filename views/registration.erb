@@ -1,0 +1,130 @@
+<html lang="ru">
+  <head>
+  </head>
+  <body>
+    <form method="post">      
+      <div class="container">
+        <div class="py-3   text-center">
+          <h1 class="mb-3 text-center">Регистрация</h1>
+        </div>
+        <h4>О Вас</h4>
+        <div class="container">
+          <div class="row justify-content-md-center">
+            <div class="col-md-4 mb-3">
+              <label for="lastName">Фамилия</label>
+              <input type="text" class="form-control" id="lastName" name="lastName"placeholder="Фамилия" value="" required="" pattern="^[А-ЯЁ][а-яё\s]+$">
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="firstName">Имя</label>
+              <input type="text" class="form-control" id="firstName" name="firstName"placeholder="Имя" value="" required="" pattern="^[А-ЯЁ][а-яё\s]+$">
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="secondName">Отчество</label>
+              <input type="text" class="form-control" id="secondName" name="secondName"placeholder="Отчество" value="" required="" pattern="^[А-ЯЁ][а-яё\s]+$">
+            </div>
+          </div>
+        </div>
+        <hr class="mb-4">
+        <h4>О вашей профессии</h4>
+        <div class="container">
+          <div class="row justify-content-md-center">
+            <div class="col-md-3 mb-3">
+              <label for="experience">Педагогический стаж</label>
+              <select class="custom-select d-block w-100" id="experience" name="experience" required="">
+                <option value="">Выберите</option>
+                <option>до 1 года</option>
+                <option>от 1 до 5 лет</option>
+                <option>от 5 до 10 лет</option>
+                <option>от 10 до 15 лет</option>
+                <option>от 15 до 20 лет</option>
+                <option>от 20 до 30 лет</option>
+                <option>более 30 лет</option>
+              </select>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="position">Должность</label>
+              <select class="custom-select d-block w-100" id="position" name="position" required="">
+                <option value="">Выберите</option>
+                <option>Воспитатель/Старший воспитатель</option>
+                <option>Педагог-психолог</option>
+                <option>Учитель-дефектолог</option>
+                <option>Учитель НОО</option>
+                <option>Учитель-предметник</option>
+                <option>Методист</option>
+                <option>Другое</option>
+              </select>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="category">Категория</label>
+              <select class="custom-select d-block w-100" id="category" name="category" required="">
+                <option value="">Выберите</option>
+                <option>Высшая</option>
+                <option>Первая</option>
+                <option>Соответствие должности</option>
+                <option>Не аттестован</option>
+              </select>
+            </div>
+          </div>
+          <div class="row justify-content-md-center">
+            <div class="col-md-7 mb-3">
+              <label for="raion">Муниципальный район</label>
+              <select class="custom-select d-block w-100" id="raion" name="raion" required="">
+                <option value="">Выберите</option>
+                <option>Ярославль гор.</option>
+                <option>Рыбинск гор.</option>
+                <option>Большесельский</option>
+                <option>Борисоглебский</option>
+                <option>Брейтовский</option>
+                <option>Гаврилов-Ямский</option>
+                <option>Даниловский</option>
+                <option>Любимский</option>
+                <option>Мышкинский</option>
+                <option>Некоузский</option>
+                <option>Некрасовский</option>
+                <option>Переславль-Залесский гор. округ</option>
+                <option>Первомайский</option>
+                <option>Пошехонский</option>
+                <option>Ростовский</option>
+                <option>Рыбинский</option>
+                <option>Тутаевский</option>
+                <option>Угличский</option>
+                <option>Ярославский</option>
+                <option>Другой субъект РФ</option>
+              </select>
+            </div>
+            <div class="col-md-5 mb-3">
+              <label for="school">Образовательная организация</label>
+              <input type="text" class="form-control" id="school" name="school" placeholder="Образовательная организация" required="">
+            </div>
+          </div>
+          <div class="row justify-content-md-center">
+            <div class="col mb-3">
+              <label for="raion">Укажите по какой программе/проекту  Вы проходите диагностику</label>
+              <select class="custom-select d-block w-100" id="programm" name="programm" required="">
+                <option value="">Выберите</option>
+                <option>Модернизация содержания и технологий НОО</option>
+                <option>Формирование функциональной грамотности младших школьников</option>
+                <option>Тьюторский центр</option>
+                <option>Поддержка ШНСУ (ШНОР)</option>
+                <option>Другое</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <hr class="mb-4">
+        <h4>Ваши контакты</h4>
+        <div class="row justify-content-md-center">
+          <div class="col-md-6 mb-3">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Введите ваш адрес электронной почты" required="">
+          </div>
+        </div>
+        <hr class="mb-4">
+      </div>      
+      <div class="container">
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Зарегистрироваться</button>
+        <a class="lead" style="color: #f00;">*Нажимая "Зарегистрироваться", вы даете согласие на обработку ваших персональных данных</a>
+      </div>
+    </form>
+  </body>
+</html>

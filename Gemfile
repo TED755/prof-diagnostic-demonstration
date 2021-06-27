@@ -1,0 +1,26 @@
+# frozen_string_literal: true
+
+source 'https://rubygems.org'
+
+git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
+
+gem 'capybara'
+gem 'google_drive'
+gem 'puma'
+gem 'rerun'
+gem 'rspec'
+gem 'simplecov'
+gem 'sinatra'
+gem 'spreadsheet'
+gem 'tilt'
+
+group :development do
+  gem 'rubocop', require: false
+end
+
+group :deployment do
+  gem 'bcrypt_pbkdf'
+  gem 'ed25519'
+  gem 'net-scp'
+  gem 'net-ssh'
+end

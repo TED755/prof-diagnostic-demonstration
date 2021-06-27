@@ -1,0 +1,19 @@
+<form method="post">
+  <div class="container-lg">
+    <div class="jumbotron">
+      <div class="container text-center">
+        <h1 class="display-0">Вопрос №<%= @test.curr_question.number%></h1>
+        <a class="lead"><%= @test.curr_question%><a>
+      </div>   
+    </div>
+
+    <div class="container-fluid">
+      <div class="form-row">
+        <div class="form-group col-md">
+          <a class="btn btn-success btn-lg btn-block" href="/yes" role="button">Согласен</a>
+          <a class="btn btn-danger btn-lg btn-block" href="/no" role="button">Не согласен</a>
+        </div>
+      </div> 
+    </div>
+  </div>
+</form>

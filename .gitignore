@@ -1,0 +1,7 @@
+.bundle
+Gemfile.lock
+client_secret.json
+# lib/files/dpo/*
+# lib/files/um/*
+files/dpo/*
+files/um/*
